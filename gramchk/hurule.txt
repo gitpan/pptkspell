@@ -1,0 +1,77 @@
+#
+# Hungarian rules 
+#  format: rule<.comment  
+#  '<.' is the separation character between
+#   rule and comment 
+#
+(^| )alakján( |,|:|;)<.alakján és alapján keverése
+(^| )az tán( |,|:|;)<.az tán és aztán keverése
+(^| )bal oldal.*? <.baloldal egybe?
+(^| )egyenlõre( |,|:|;)<.egyelõre és egyenlõre keverése
+(^| )elemet <. elemet és emelet keverése
+(^| )e(l|ll)ás.*? <.elásson és ellásson keverése
+(^| )fegyverzet( |,|:|;)<.fegyverzet és fegyverzett keverése
+(^| )fogalom( |,|:|;)<.fogalom és forgalom keverése
+(^| )forgalom( |,|:|;)<.fogalom és forgalom keverése
+(^| )fõlény( |,|:|;)<.fõlény, fölény keverése
+(^| )fûl( |,|:|;)<.fül, fûl keverése
+(^| )(\w|á|é|í|õ|û|ó|ú|ö|ü)*?ikig( |,|:|;)<.hasikig, házikig, stb. jó itt?
+(^| )irt( |,|:|;)<.irt és írt keverése
+(^| )ha(ll|l)ott.*? <.halott és hallott keverése
+(^| )hason ló( |,|:|;)<.hason ló és hasonló keverése
+(^| )heten( |,|:|;)<.heten és héten keverése
+(^| )idény.*? <.idény és igény keverése
+(^| )jelentõsség.*? <.jelentõség és jelentõsség keverése
+(^| )jobb oldal.*? <.jobboldal egybe?
+(^| )jóg(a|á).*? <.joga és jóga keverése
+(^| )kellet( |,|:|;)<.kellet és kellett keverése
+(^| )keltõs.*? <.keltõs és kettõs keverése
+(^| )(\w|á|é|í|õ|û|ó|ú|ö|ü)*?kép( |,|:|;)<.kép és képp keverése
+(^| )kiadta( |,|:|;)<.kiadta és kiadó keverése
+(^| )kicsiket( |,|:|;)<.kicsiket és kicsikét keverése
+(^| )kicsikét( |,|:|;)<.kicsiket és kicsikét keverése
+(^| )kiválnak( |,|:|;)<.kiválnak és kivárnak keverése
+(^| )kivárnak( |,|:|;)<.kiválnak és kivárnak keverése
+(^| )kór([^h]| h[^á]| há[^z]).*? <.kór és kor keverése
+(^| )kölcsönösén( |,|:|;)<.kölcsönösen és kölcsönösén keverése
+(^| )körül belül.*? <.körülbelül egybe
+(^| )kûrt.*? <.kürt és kürt keverése
+(^| )lá(d|tt)(a|á).*? <.látta és láda keverése
+(^| )lene( |,|:|;)<.lene és lenne keverése
+(^| )meghallat.*? <.meghallat és meghallgat keverése
+(^| )meg van( |,|:|;)<.megvan és meg van keverése
+(^| )mellet( |,|:|;)<.mellet és mellett keverése
+(^| )mindenek([^ ]| [^e]| e[^l]| el[^õ]| elõ[^t]| elõt[^t])<.mindenek és mindennek keverése
+(^| )modem.*? <.modem és modern keverése
+(^| )mér( |,|:|;)<.miért és mér keverése
+(^| )mért( |,|:|;)<.mért és miért keverése
+(^| )mûsör( |,|:|;)<.mûsör és mûsor keverése
+(^| )nem legyen( |,|:|;)<.ne legyen helyett nem legyen
+(^| )nem egyszer( |,|:|;)<.nem egyszer egybe?
+(^| )nemzettség.*? <.nemzetség helyet nemzettség
+(^| )rését( |,|:|;)<.rését, részét keverése
+(^| )siketül.*? <.siketül, sikerül keverése
+(^| )számra( |,|:|;)<.számra, számára keverése
+(^| )szemel( |,|:|;)<.szemel, szemmel keverése
+(^| )szint( |,|:|;)<.színt, szint keverése 
+(^| )szökött( |,|:|;)<.szökött, szokott keverése 
+(^| )színt( |,|:|;)<.színt, szint keverése 
+(^| )szûkség.*? <.szükség és szûkség keverése
+(^| )tejes.*? <.teljes és tejes keverése
+(^| )tolla.*? <.tolla és tolta keverése
+(^| )tõrök.*? <.török és tõrök keverése
+(^| )tûntet.*? <.tûntet és tüntet keverése
+(^| )veretõ( |,|:|;)<.veretõ és vezetõ keverése
+(^| )viasza( |,|:|;)<.viasza és vissza keverése
+(^| )váltóz.*? <.váltóz és változ keverése
+(^| )ált( |,|:|;)<.ált és állt keverése
+(^| )átló.*? <.átló és álló keverése
+(^| )álló.*? <.ált és állt keverése
+(^| )áru árú( |,|:|;)<.áru és árú keverése
+(^| )épen( |,|:|;)<.éppen és épen keverése
+(^| )õrökké( |,|:|;)<.örökké és õrökké keverése
+(^| )a (a|á|e|é|í|o|ó|u|ú|ö|õ|ü|û|Á|É|Í|Ó|Ú|Õ|Û|Ö|Ü).*? <.a után magánhangzóval kezdõdõ szó
+#[^,] (hogy |de |ahogy.*? |aki.*? |ami.*? |amely.*? |hiszen |mert )<.hogy elõtt vesszõ
+[^(,|\.|?|!)] (hogy |hiszen |mert |ha )<.hogy, hiszen, mert, ha elõtt vesszõ
+(\w|á|é|í|ó|ú|õ|û|ö|ü|Á|É|Í|Ó|Ú|Û|Õ|Ö|Ü)(,|\.|>|<|'|"|\\|!|\?|:|;|#|$|%|^|\+|§|=|\(|\)|\]|\[|\{|\}|&|@|/|\^)(\w|á|é|í|ó|ú|õ|û|ö|ü|Á|É|Í|Ó|Ú|Û|Õ|Ö|Ü)<.jel betûk között
+

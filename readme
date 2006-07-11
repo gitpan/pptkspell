@@ -1,0 +1,57 @@
+Pptkspell is a perl/tk editor and spell checker with text-to-speech 
+capability. It checks on the fly the text you enter.
+
+On the main directory you can find the linux files. The windows files are in the winfiles subdirectory with a readme.win file.
+
+Language files:
+----------------
+In order to use it you need to download the dictionary's 
+.aff and .dic files from:
+http://lingucomponent.openoffice.org/spell_dic.html
+for your language, and  copy them into any directory,
+for example /home/yourname/languages.
+
+At the first calling you will get an error in the status
+line, saying, the program does not find the dictionary.
+
+select Misc/Configure, and enter the correct full path name
+and also the name of the language file,
+for example: 
+/home/yourname/languages/de_DE
+
+Spell server file:
+------------------
+The file spellserver, which provides the spelling interface, needs to be copied into 
+/usr/local/bin, and made executable (chmod +x /usr/local/bin/spellserver)
+
+The source code of spellserver is also added. It will compile with the 
+myspell library, also available from http://lingucomponent.openoffice.org/.
+
+Grammar Checking
+----------------
+Pptkspell can do grammar check on any text file. It will use Daniel Naber's grammar check, whose English version is on http://www.danielnaber.de/. The version, that handles English, German and Hungarian and has the proper utility tools, can be downloaded from http://tkltrans.sourceforge.net/languagetool/Hu_languagetool.tar.gz . The grammar check needs 2 configuration parameters: The home directory of the grammar checker and the language, you want to check (at present en, de or hu). 
+
+Text-To-Speech facility (optional):
+--------------------------------------
+The file doptkphots.sh need to be copied into /usr/bin,
+if you want to use the text-to-speech facility of Pptkspell.
+
+doptkphots is prepared for using the Hungarian TTS facility.
+If you use any other language, you must set up doptkphots 
+according to the rules, your language does the text to phoneme
+conversion.
+
+In this case also the mbrola language must be available
+and you must enter the right full path
+name of ot using Misc/Configure.
+
+The mbrola home page is:
+http://tcts.fpms.ac.be/synthesis/mbrola.html
+
+Installing utility:
+-------------------
+The file install.sh copies the spell server, the spell server starter perl script (strtspellserver.pl), Pptkspell.pl, Pptkspell (the starting shell file)  and the doptkphots.sh (text to speech utility)  for your convenience. You must call it as super user.
+
+
+Have fun!
+
